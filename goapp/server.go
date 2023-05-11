@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"github.com/RediSearch/redisearch-go/redisearch"
@@ -8,6 +9,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"
 	"net/http"
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -29,12 +31,13 @@ func setRoutes(r *chi.Mux) {
 		replyOK(w)
 	})
 
-	r.Get("/search/{query}", func(w http.ResponseWriter, r *http.Request) {
-		q := chi.URLParam(r, "query")
-		offset, _ := strconv.Atoi(r.URL.Query().Get("offset"))
-		limit, _ := strconv.Atoi(r.URL.Query().Get("limit"))
-		println("offset = ", offset, " : limit = ", limit)
-		result, err := rsSearch(q, limit, offset)
+	r.Get("/search", func(w http.ResponseWriter, r *http.Request) {
+		query := r.URL.Query().Get("q")
+		filter := r.URL.Query().Get("f")
+		println(filter)
+		offset, _ := strconv.Atoi(r.URL.Query().Get("o"))
+		limit, _ := strconv.Atoi(r.URL.Query().Get("l"))
+		result, err := rsInitSearch(query, offset, limit)
 		if err == nil {
 			replyJSON(w, r, result)
 			return
@@ -82,15 +85,49 @@ func replyJSON(w http.ResponseWriter, r *http.Request, v interface{}) {
 }
 
 // /////
-func rsSearch(s string, offset int, limit int) (docs []redisearch.Document, err error) {
-	if limit > 50 {
-		limit = 50
-	} else if limit < 10 {
-		limit = 10
+func rsInitSearch(query string, offset int, limit int) (docs []redisearch.Document, err error) {
+	// check offset and limit
+	if limit > 100 {
+		limit = 100
 	}
-	docs, _, err = rsc.Search(redisearch.NewQuery(s).Limit(offset, limit))
-	if err != nil {
-		return nil, err
+	if limit < 25 {
+		limit = 25
 	}
-	return docs, nil
+	if offset < 0 {
+		offset = 0
+	}
+	// check for usable strings as search "tokens" - must have at least 1
+	tokens := rsQuery2Tokens(query)
+	if len(tokens) == 0 {
+		return docs, errors.New("invalid search - must be one or more words or numbers")
+	}
+	return rsIterativeSearch(tokens, offset, limit)
+}
+
+func rsIterativeSearch(tokens []string, offset int, limit int) (docs []redisearch.Document, err error) {
+	phraseExact := strings.Join(tokens, " ")                                                 // multi-word exact phrase
+	phraseWild := strings.Join(tokens, "*")                                                  // multi-word wildcard phrase search
+	unionExact := strings.Join(tokens, "|")                                                  // union search (OR) without wildcard
+	unionWild := "*" + strings.Join(tokens, "*|*") + "*"                                     // union search (OR) with wildcards
+	query := "(" + phraseExact + ")|(" + phraseWild + "*)|(" + unionExact + ")|" + unionWild // put it all together
+	docs, _, err = rsc.Search(rsNewQuery(query, offset, limit))
+	return docs, err
+}
+
+func rsNewQuery(query string, offset int, limit int) *redisearch.Query {
+	println("query=["+query+"] offset:", offset, " limit:", limit)
+	search := redisearch.NewQuery(query)
+	if offset > 0 {
+		search.Paging.Offset = offset
+	}
+	if limit > 0 {
+		search.Paging.Num = limit
+	}
+	return search
+}
+
+func rsQuery2Tokens(query string) (tokens []string) {
+	re := regexp.MustCompile("[^a-zA-Z\\d:]")
+	tokens = re.Split(query, -1)
+	return
 }
