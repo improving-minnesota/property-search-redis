@@ -1,4 +1,4 @@
-# property-search-aws
+# property-search-redis
 
 This is just a basic scaffold to get one started with a property search API.
 Full-text search is provided by RediSearch run in a container.
