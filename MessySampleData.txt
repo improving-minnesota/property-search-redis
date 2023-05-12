@@ -1,0 +1,40 @@
+RP|Appraisal_Year|Account_Num|Record_Type|Sequence_No|PIDN|Owner_Name|Owner_Address|Owner_CityState|Owner_Zip|Owner_Zip4|Owner_CRRT|Situs_Address|Property_Class
+C|2023|99999001|AAA1|1|P—490---00---01|Owen Owner 1|200 HAPPY ST                  |GREEN ACRES, TX|76102|6311|     |117 E KNAPSLAP ST              |commercial
+C|2023|99999002|AAA2|2|P—490---00---02|Owen Owner 2|201 HAPPY ST                  |GREEN ACRES, TX|76103|6312|     |118 E KNAPSLAP ST              |commercial
+C|2023|99999003|AAA3|3|P—490---00---03|Owen Owner 3|202 HAPPY ST                  |GREEN ACRES, TX|76104|6313|     |119 E KNAPSLAP ST              |commercial
+C|2023|99999004|AAA4|4|P—490---00---04|Owen Owner 4|203 HAPPY ST                  |GREEN ACRES, TX|76105|6314|     |120 E KNAPSLAP ST              |commercial
+C|2023|99999005|AAA5|5|P—490---00---05|Owen Owner 5|204 HAPPY ST                  |GREEN ACRES, TX|76106|6315|     |121 E KNAPSLAP ST              |commercial
+C|2023|99999006|AAA6|6|P—490---00---06|Owen Owner 6|205 HAPPY ST                  |GREEN ACRES, TX|76107|6316|     |122 E KNAPSLAP ST              |residential
+C|2023|99999007|AAA7|7|P—490---00---07|Owen Owner 7|206 HAPPY ST                  |GREEN ACRES, TX|76108|6317|     |123 E KNAPSLAP ST              |residential
+C|2023|99999008|AAA8|8|P—490---00---08|Owen Owner 8|207 HAPPY ST                  |GREEN ACRES, TX|76109|6318|     |124 E KNAPSLAP ST              |residential
+C|2023|99999009|AAA9|9|P—490---00---09|Owen Owner 9|208 HAPPY ST                  |GREEN ACRES, TX|76110|6319|     |125 E KNAPSLAP ST              |personal business
+C|2023|99999010|AAA10|10|P—490---00---10|Owen Owner 10|209 HAPPY ST                  |GREEN ACRES, TX|76111|6320|     |126 E KNAPSLAP ST              |personal business
+C|2023|99999011|AAA11|11|P—490---00---11|Owen Owner 11|210 HAPPY ST                  |GREEN ACRES, TX|76112|6321|     |127 E KNAPSLAP ST              |personal business
+C|2023|99999012|AAA12|12|P—490---00---12|Owen Owner 12|211 HAPPY ST                  |GREEN ACRES, TX|76113|6322|     |128 E KNAPSLAP ST              |personal business
+C|2023|99999013|AAA13|13|P—490---00---13|Owen Owner 13|212 HAPPY ST                  |GREEN ACRES, TX|76114|6323|     |129 E KNAPSLAP ST              |residential
+C|2023|99999014|AAA14|14|P—490---00---14|Owen Owner 14|213 HAPPY ST                  |GREEN ACRES, TX|76115|6324|     |130 E KNAPSLAP ST              |residential
+C|2023|99999015|AAA15|15|P—490---00---15|Owen Owner 15|214 HAPPY ST                  |GREEN ACRES, TX|76116|6325|     |131 E KNAPSLAP ST              |personal business
+C|2023|99999016|AAA16|16|P—490---00---16|Owen Owner 16|215 HAPPY ST                  |GREEN ACRES, TX|76117|6326|     |132 E KNAPSLAP ST              |personal business
+C|2023|99999017|AAA17|17|P—490---00---17|Owen Owner 17|216 HAPPY ST                  |GREEN ACRES, TX|76118|6327|     |133 E KNAPSLAP ST              |residential
+C|2023|99999018|AAA18|18|P—490---00---18|Owen Owner 18|217 HAPPY ST                  |GREEN ACRES, TX|76119|6328|     |134 E KNAPSLAP ST              |residential
+C|2023|99999019|AAA19|19|P—490---00---19|Owen Owner 19|218 HAPPY ST                  |GREEN ACRES, TX|76120|6329|     |135 E KNAPSLAP ST              |residential
+C|2023|99999020|AAA20|20|P—490---00---20|Owen Owner 20|219 HAPPY ST                  |GREEN ACRES, TX|76121|6330|     |136 E KNAPSLAP ST              |residential
+C|2023|99999021|AAA21|21|P—490---00---21|Owen Owner 21|220 HAPPY ST                  |GREEN ACRES, TX|76122|6331|     |137 E KNAPSLAP ST              |mineral
+C|2023|99999022|AAA22|22|P—490---00---22|Owen Owner 22|221 HAPPY ST                  |GREEN ACRES, TX|76123|6332|     |138 E KNAPSLAP ST              |mineral
+C|2023|99999023|AAA23|23|P—490---00---23|Owen Owner 23|222 HAPPY ST                  |GREEN ACRES, TX|76124|6333|     |139 E KNAPSLAP ST              |mineral
+C|2023|99999024|AAA24|24|P—490---00---24|Owen Owner 24|223 HAPPY ST                  |GREEN ACRES, TX|76125|6334|     |140 E KNAPSLAP ST              |mineral
+C|2023|99999025|AAA25|25|P—490---00---25|Owen Owner 25|224 HAPPY ST                  |GREEN ACRES, TX|76126|6335|     |141 E KNAPSLAP ST              |residential
+C|2023|99999026|AAA26|26|P—490---00---26|Owen Owner 26|225 HAPPY ST                  |GREEN ACRES, TX|76127|6336|     |142 E KNAPSLAP ST              |residential
+C|2023|99999027|AAA27|27|P—490---00---27|Owen Owner 27|226 HAPPY ST                  |GREEN ACRES, TX|76128|6337|     |143 E KNAPSLAP ST              |residential
+C|2023|99999028|AAA28|28|P—490---00---28|Owen Owner 28|227 HAPPY ST                  |GREEN ACRES, TX|76129|6338|     |144 E KNAPSLAP ST              |residential
+C|2023|99999029|AAA29|29|P—490---00---29|Owen Owner 29|228 HAPPY ST                  |GREEN ACRES, TX|76130|6339|     |145 E KNAPSLAP ST              |residential
+C|2023|99999030|AAA30|30|P—490---00---30|Owen Owner 30|229 HAPPY ST                  |GREEN ACRES, TX|76131|6340|     |146 E KNAPSLAP ST              |residential
+C|2023|99999031|AAA31|31|P—490---00---31|Owen Owner 31|230 HAPPY ST                  |GREEN ACRES, TX|76132|6341|     |147 E KNAPSLAP ST              |residential
+C|2023|99999032|AAA32|32|P—490---00---32|Owen Owner 32|231 HAPPY ST                  |GREEN ACRES, TX|76133|6342|     |148 E KNAPSLAP ST              |agricultural
+C|2023|99999033|AAA33|33|P—490---00---33|Owen Owner 33|232 HAPPY ST                  |GREEN ACRES, TX|76134|6343|     |149 E KNAPSLAP ST              |agricultural
+C|2023|99999034|AAA34|34|P—490---00---34|Owen Owner 34|233 HAPPY ST                  |GREEN ACRES, TX|76135|6344|     |150 E KNAPSLAP ST              |agricultural
+C|2023|99999035|AAA35|35|P—490---00---35|Owen Owner 35|234 HAPPY ST                  |GREEN ACRES, TX|76136|6345|     |151 E KNAPSLAP ST              |residential
+C|2023|99999036|AAA36|36|P—490---00---36|Owen Owner 36|235 HAPPY ST                  |GREEN ACRES, TX|76137|6346|     |152 E KNAPSLAP ST              |residential
+C|2023|99999037|AAA37|37|P—490---00---37|Owen Owner 37|236 HAPPY ST                  |GREEN ACRES, TX|76138|6347|     |153 E KNAPSLAP ST              |residential
+C|2023|99999038|AAA38|38|P—490---00---38|Owen Owner 38|237 HAPPY ST                  |GREEN ACRES, TX|76139|6348|     |154 E KNAPSLAP ST              |residential
+C|2023|99999039|AAA39|39|P—490---00---39|Owen Owner 39|238 HAPPY ST                  |GREEN ACRES, TX|76140|6349|     |155 E KNAPSLAP ST              |residential
