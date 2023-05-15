@@ -2,21 +2,24 @@ version: "3.9"
 services:
   # redisearch first
   redisearch:
+    container_name: redisearch
     image: "redis/redis-stack-server:latest"
     network_mode: "host"
   # app connects to redisearch
   api:
     depends_on:
       - redisearch
+    container_name: search_api
     build:
-      context: .
-      dockerfile: GoApi.Dockerfile
+      context: ./goapp
+      dockerfile: Dockerfile
     network_mode: "host"
-    # python script loads the data
+  # python script loads the data
   data:
     depends_on:
       - redisearch
+    container_name: search_data
     build:
       context: .
-      dockerfile: LoadMessyData.dockerfile
+      dockerfile: LoadMessyData.Dockerfile
     network_mode: "host"

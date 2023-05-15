@@ -12,7 +12,23 @@ https://www.youtube.com/watch?v=infTV4ifNZY&list=PLratyGi2ixLsqd3SRcsJticE9yt5LD
 
 ---
 
-Would like to have:
+## Quick Start with Docker
 
- - [ ] Integrated app tests for CI
- - [ ] Load tests for benchmarking
+1. Run: `docker-compose up`
+2. Open your browser with a valid search URL. e.g. http://localhost:3000/search?q=9005 
+
+Data will automatically be loaded from "MessySampleData.txt"
+
+---
+
+## API Search Reference
+
+All searches use the HTTP `GET` method. Just set the appropriate query params as needed:
+
+ - `q`: "query"; the term or terms to query; terms must be separated by `+`; e.g. http://localhost:3000/search?q=9005+9006
+ - `l`: limit for paging; min is 25 and max is 100; e.g. http://localhost:3000/search?q=owen&l=30
+ - `o`: offset for paging
+
+A health check URL is provided at `/`. e.g. GET http://localhost:3000/ returns HTTP Status 200 with `{"message":"OK"}`
+
+Read the Go code in [goapp/server.go](goapp/server.go) for additional reference.
